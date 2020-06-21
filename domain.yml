@@ -1,0 +1,196 @@
+intents:
+  - greet
+  - name_of_person
+  - category
+  - years
+  - choose_list
+  - get_hours
+  - get_trouble
+  - night_headlight
+  - style_glass
+  - power_options
+  - sun_options
+  - select_options
+  - power_specs
+  - lens_power
+  - eye_problem
+  - fix_consultation
+entities:
+- selectoption
+- namedetails
+- categotydetails
+- agedetails
+- poweroption
+- sunoption
+- disease
+- hours
+- trouble
+- night
+- style
+- specs
+- lenspower
+- vision
+- fix
+actions:
+- utter_greet
+- utter_ask_namedetails
+- utter_ask_categotydetails
+- utter_ask_agedetails
+- utter_ask_suggestiondetails
+- action_option_value
+- action_eye_disease
+- action_time_hours
+- utter_ask_choose
+- utter_ask_hours
+- utter_ask_trouble
+- utter_ask_night
+- action_night_sign
+- action_report
+- utter_ask_style
+- action_glass_brand
+- utter_ask_sunglasses
+- utter_ask_powerlens
+- action_power_wear
+- utter_ask_powerdetails
+- action_ask_power
+- utter_ask_powerquestion
+- action_vision_problem
+- utter_ask_fixconsultation
+- action_fix_consultation
+- utter_ask_conclusion
+- action_style_brand
+forms:
+- form_info
+slots:
+  namedetails:
+    type: unfeaturized
+  categotydetails:
+    type: unfeaturized
+  agedetails:
+    type: unfeaturized  
+  selectoption:
+    type: unfeaturized
+  disease:
+    type: unfeaturized  
+  hours:
+    type: unfeaturized   
+  trouble:
+    type: unfeaturized  
+  night:
+    type: unfeaturized
+  style:
+    type: unfeaturized
+  sunoption:
+    type: unfeaturized
+  poweroption:
+    type: unfeaturized
+  specs:
+    type: unfeaturized
+  lenspower:
+    type: unfeaturized
+  vision:
+    type: unfeaturized 
+  fix:
+    type: unfeaturized 
+  requested_slots:
+    type: unfeaturized   
+templates:
+  utter_greet:
+  - text: "Hey! I am VisionBOT. Please give the basic details to know more about you!!" 
+  utter_ask_namedetails:
+  - text: "Please enter your name: "  
+  utter_ask_categotydetails:
+  - text: "Select the gender!!"
+    buttons:
+    - title: "Male"
+      payload: "male"
+    - title: "Female"
+      payload: "female"
+  utter_ask_agedetails:
+  - text: "Enter your age: " 
+  utter_ask_suggestiondetails:
+  - text: "What would you like to have suggestion on?"     
+    buttons:
+    - title: "Consultation"
+      payload: "consultation"
+    - title: "Powerglasses"
+      payload: "powerglasses" 
+    - title: "Sunglasses"
+      payload: "sunglasses"
+  utter_ask_choose:
+  - text: "Choose your problem listed below:"
+    buttons:
+    - title: "EyeStrain"   
+      payload: "eyestrain"
+    - title: "Dryeyes"
+      payload: "dryeyes"  
+    - title: "Headache"   
+      payload: "headache"
+    - title: "Itchyeyes"
+      payload: "itchyeyes"   
+  utter_ask_hours:
+  - text: "How many hours a day/night do you use a computer?"  
+    buttons:
+    - title: "Sometimes"   
+      payload: "sometimes"
+    - title: "Frequently"
+      payload: "frequently"  
+    - title: "Never"   
+      payload: "never" 
+  utter_ask_trouble:
+  - text: "Do you have trouble focusing in the distance after reading or using the computer for more than 10 minutes?"  
+    buttons:
+    - title: "Rarely"   
+      payload: "rarely"
+    - title: "Mostly"
+      payload: "mostly"  
+  utter_ask_night:
+  - text: "Do you have trouble reading street signs or with seeing glare from oncoming headlights at night?"   
+    buttons:
+    - title: "Often"   
+      payload: "often"
+    - title: "Occasionally"
+      payload: "occasionally"
+    - title: "Never"
+      payload: "never" 
+  utter_ask_style:
+  - text: "Choose your brand:"
+    buttons:
+    - title: "Rayban"   
+      payload: "rayban"
+    - title: "Fast Track"
+      payload: "fast track"  
+    - title: "Aviator"   
+      payload: "aviator"   
+  utter_ask_sunglasses:  
+  - text: "Please Click: https://www.lenskart.com/sunglasses.html"  
+  utter_ask_powerlens:
+  - text: "Currently do you use powerglass?"
+    buttons:
+    - title: "Yes"   
+      payload: "yes"
+    - title: "No"
+      payload: "no"
+  utter_ask_powerdetails:
+  - text: "Enter your left eye and right eye power?" 
+  utter_ask_powerquestion:
+  - text: "Click on the problem do you face: "
+    buttons:
+    - title: "Near object"   
+      payload: "nearobject"
+    - title: "Distant object"
+      payload: "distantobject"  
+    - title: "Blurred Vision"   
+      payload: "blurredvision" 
+  utter_ask_fixconsultation:
+  - text: "We got your details. Do you like to fix consultation?"
+    buttons:
+    - title: "Proceed"   
+      payload: "proceed"
+    - title: "May Be Later"
+      payload: "may be later" 
+  utter_ask_conclusion:
+  - text: "Thanks. Our Team will Contact you Shortly Have a great day!!!!!!"   
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

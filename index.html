@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<body style = "margin:0px;padding:0px;">
+<div id="webchat"/>
+<script src="https://storage.googleapis.com/mrbot-cdn/webchat-latest.js"></script>
+
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "Hi Welcome",
+	interval: 1000,
+    customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    socketUrl: "http://localhost:5005",
+    socketPath: "/socket.io/",
+    title: "LENSKART",
+    subtitle: "Vision Bot",
+	inputTextFieldHint: "Type a message",
+	connectingText: "Waiting for server",
+	hideWhenNotConnected: false,
+	fullScreenMode: false,
+	profileAvatar:"logo1.png",
+	openLauncherImage: "speech-bubble.svg",
+	params: {
+	  images: {
+	    dims: {
+		  width: 2000,
+		  height: 2000,
+		}
+	  },
+	storage:"session"
+	}
+  })
+</script>
+
+<img src = "https://vrchennai.com/UploadFile/storeImageGallery/LensKart-2.jpg"
+style= "width:100%; height:100vh;object-fit:cover;"/>
+
+</body>
+</html>
